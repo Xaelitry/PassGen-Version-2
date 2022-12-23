@@ -3,8 +3,10 @@ import generator
 import os
 import time
 
+# Console Name
 os.system('title Xaelitry\'s Secure Password Generator')
 
+# Variable Storage
 helloText = '''
 ###############################
 ##                           ##
@@ -13,7 +15,6 @@ helloText = '''
 ##                           ##
 ###############################
 '''
-
 menu = '''
 [1] Generate password
 [2] Generate password without selected characters \n    (for login portals that only accept some symbols)
@@ -25,6 +26,7 @@ if __name__ == '__main__':
     while True:
         print(menu)
 
+        # Menu Selection
         mS = input('\nSelect which option you would like to perform [1/2]: ')
         if mS == "1":
             generator.generate()
@@ -32,6 +34,7 @@ if __name__ == '__main__':
             validator.validate()
             validator.generate()
 
+        # Check for continue / close
         cont = input('Do you want to continue? [Y/N] ')
         yes = ['y', 'Y', 'yes', 'Yes', 'YES']
         no = ['n', 'N', 'no', 'No', 'NO']
